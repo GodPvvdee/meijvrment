@@ -9,19 +9,21 @@ import { device } from "../../utils";
 import imgL from "../../assets/image/png/portrait-1.png";
 import imgHeader from "../../assets/image/webp/Web Cover.png";
 import imgHeader2 from "../../assets/image/png/Cover 1-1.jpg"
-import Chero from "../../components/Card/hero";
 import Slider from "../../components/Slider";
-const chero = [<Chero />, <Chero />, <Chero />]
+import Card from "../../components/Card";
 const ImgRight = styled.img`
   max-width: 100%;
 `;
+// const headerSlider = [imgHeader2,imgHeader2]
 const Hero = () => {
   return (
     <>
       <div className="" style={{ position: 'relative', }}>
         <ImgRight src={imgHeader2} alt="" />
       </div>
-      {/* <!-- Hero Area --> */}
+        {/*<div className="flexCenter">*/}
+        {/*    <Slider comps={headerSlider} length={5}  />*/}
+        {/*</div>*/}
 
     </>
   );

@@ -8,14 +8,15 @@ import { designWorks1 } from "../../data";
 import Card from "../../components/Card";
 import Slider from "../../components/Slider";
 import imgHeader from "../../assets/image/webp/head.svg"
-import cityImg from "../../assets/image/jpg/city.jpg";
+import cityImg from "../../assets/image/png/huree.png";
+import innerImg from "../../assets/image/png/BAT_3457-1.jpg"
 import LogoImg from "../../assets/image/jpg/logo.jpg";
 import { Center } from "@chakra-ui/layout";
 import Partner from '../../components/PartnersSlider/Partner'
 
 
 const cards = [<Card />, <Card />, <Card />, <Card />, <Card />, <Card />, <Card />, <Card />];
-const logos = [LogoImg, LogoImg, LogoImg, LogoImg, LogoImg, LogoImg];
+// const logos = [LogoImg, LogoImg, LogoImg, LogoImg, LogoImg, LogoImg];
 const Works = () => {
   const [items, setItems] = useState([]);
   const [activeLink, setActiveLink] = useState("*");
@@ -61,7 +62,16 @@ const Works = () => {
       </div>
 
       <img src={cityImg} className="my-4" />
-        <h1 style={{color:'#495fef',textAlign:'center'}}>Мэдээ мэдээлэл</h1>
+      <img src={innerImg} className="my-4"/>
+        <h1 className="news-title" >Мэдээ мэдээлэл</h1>
+        <style jsx>{`
+        .news-title{
+        color: #495fef;
+        text-align: center;
+        font-size: 30px;
+        }
+        
+        `}</style>
       <Center>
         <div className="grid grid-cols-3 gap-8">
           <Card />
@@ -70,7 +80,7 @@ const Works = () => {
         </div>
       </Center>
 {/*end*/}
-        <h1 style={{color:'#495fef',textAlign:'center'}}>Худалдаа үйлчилгээ</h1>
+        <h1 className="news-title" >Худалдаа үйлчилгээ</h1>
         <Center>
             <div className="grid grid-cols-6 gap-8">
                 <Card />

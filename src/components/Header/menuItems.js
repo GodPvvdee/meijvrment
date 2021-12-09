@@ -13,7 +13,5 @@ export const menuItems = [
       { name: "photography-1", label: "photography 01" },
       { name: "photography-2", label: "photography 02" },
     ],
-
   },
-
 ];
