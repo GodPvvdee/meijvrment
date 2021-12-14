@@ -6,7 +6,7 @@ import imgLogo from "../../assets/image/png/p02.png";
 import styled from "styled-components";
 const ImgRight = styled.img`
   max-width: 15%;
-  margin-right: 100px;
+  margin-right: 100px;  
 `;
 const Logo = ({ color = "front", height, className = "", ...rest }) => {
   return (
@@ -15,6 +15,7 @@ const Logo = ({ color = "front", height, className = "", ...rest }) => {
         <Image src={imgLogo} alt={"logo"} layout={"fixed"} width={100} height={80} />
       </a>
     </Link>
+    
   );
 };
 export default Logo;

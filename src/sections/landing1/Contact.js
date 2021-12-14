@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
 import GlobalContext from "../../context/GlobalContext";
 import { Section, Title, ButtonIcon } from "../../components/Core";
 import Availability from "../../components/Availability";
@@ -14,10 +13,6 @@ const Hero = () => {
         <Container>
           <Row className="text-center justify-content-center">
             <Col lg="10" xl="7">
-              <Availability />
-              <div className="text-center my-5">
-                <Title>Do you have illustration project? Let's talk.</Title>
-              </div>
               <div className="text-center">
                 <ButtonIcon
                   onClick={(e) => {
@@ -25,7 +20,7 @@ const Hero = () => {
                     gContext.toggleContact();
                   }}
                 >
-                  Let's Talk Now
+                  Холбоо барих
                 </ButtonIcon>
               </div>
             </Col>
@@ -35,5 +30,4 @@ const Hero = () => {
     </>
   );
 };
-
 export default Hero;

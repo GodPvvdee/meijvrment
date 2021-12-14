@@ -162,30 +162,7 @@ const WorkSingle = () => {
               </Col>
             </Row>
 
-            <div className="text-center mt-lg-5">
-              <Text variant="tag" className="mb-1" color="lightShade">
-                Next Project
-              </Text>
-              <Link href="/portfolio-details">
-                <a>
-                  <Button
-                    arrowRight
-                    className="border-0 bg-transparent shadow-none text-capitalize py-3"
-                    css={`
-                    font-weight: 700
-                    font-size: 1.5rem;
-                    letter-spacing: -1.2px;
-                    line-height: 1.375;
-                    @media ${device.md} {
-                      font-size: 2rem;
-                    }
-                `}
-                  >
-                    Replace
-                  </Button>
-                </a>
-              </Link>
-            </div>
+            
           </Container>
         </Section>
         <Box py={4}>

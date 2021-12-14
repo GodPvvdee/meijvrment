@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-import { Box, Heading, IconButton, useBreakpointValue, VStack } from "@chakra-ui/react";
+import { Box, Heading, IconButton,Flex, useBreakpointValue, VStack } from "@chakra-ui/react";
 import Slider from 'react-slick';
 import Card from "../Card";
 // import Text from "antd/es/typography/Text";
@@ -8,7 +8,7 @@ import Card from "../Card";
 
 const Index = ({ comps, length, title, subTitle }) => {
     const [slider, setSlider] = React.useState(null)
-    console.log("COmps ", comps.length)
+    console.log("COmps ", comps)
     // Settings for the slider
     const settings = {
         dots: true,
@@ -89,7 +89,7 @@ const Index = ({ comps, length, title, subTitle }) => {
                     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
                 />
                 {/* Left Icon */}
-                <IconButton
+                {/* <IconButton
                     aria-label="left-arrow"
                     variant="ghost"
                     position="absolute"
@@ -99,7 +99,7 @@ const Index = ({ comps, length, title, subTitle }) => {
                     zIndex={2}
                     onClick={() => slider?.slickPrev()}>
                     <BiLeftArrowAlt size="30px" color={"#0092ef"} />
-                </IconButton>
+                </IconButton> */}
                 {/* Right Icon */}
                 <IconButton
                     aria-label="right-arrow"
@@ -112,19 +112,21 @@ const Index = ({ comps, length, title, subTitle }) => {
                     onClick={() => slider?.slickNext()}>
                     <BiRightArrowAlt size="30px" color={"#0092ef"} />
                 </IconButton>
-                <div style={{ width: "90%", margin: 'auto' }}>
+                <div style={{ width: "100%",display:'inline', margin: 'auto',}}>
                     {/* Slider */}
-                    <Slider {...settings} ref={(slider) => setSlider(slider)}>
+                    <Slider {...settings} ref={(slider) => setSlider()}>
+                        
                         {
-                            comps?.map((comp) => (
-                                comp
+                            comps?.map((comp, i) => (
+                                <div className=''  key={i} >
+                                    <Card data={comp}/>
+                                </div>
                             ))
                         }
+                        
                     </Slider>
                 </div>
             </Box>
-
-
         </>
     )
 }

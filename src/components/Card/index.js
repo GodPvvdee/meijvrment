@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from 'next/dist/client/link';
 import {
     Box,
     Center,
@@ -18,7 +18,7 @@ import {
 import { StarIcon } from "@chakra-ui/icons";
 
 
-const Index = ({ name, brand }) => {
+const Index = ({data}) => {
     const { isOpen, onToggle } = useDisclosure()
     const property = {
         imageUrl: "http://ddl.mn/wp-content/uploads/2021/05/zx7-315gt-200x200.jpg",
@@ -33,8 +33,8 @@ const Index = ({ name, brand }) => {
     return (
         <div>
             <Center py={6} boxShadow={'2xl'}>
-                <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" maxWidth={260} className='bg-white rounded-xl'>
-                    <Image src={property.imageUrl} alt={property.imageAlt} className='mx-1' />
+                <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden"  maxWidth={260} className='bg-white rounded-xl'>
+                    <Image src={data.image} alt={property.imageAlt}   objectFit="contain"  className='mx-1' />
                     <Box p="3">
                         <Box
                             mt="1"
@@ -45,7 +45,7 @@ const Index = ({ name, brand }) => {
                             lineHeight="tight"
                             isTruncated
                         >
-                            {property.title}
+                            {data.name}
                         </Box>
 
                         <Box
@@ -70,7 +70,14 @@ const Index = ({ name, brand }) => {
                                 _hover={{
                                     transform: 'translateY(-2px)',
                                 }}>
-                                дэлгэрэнгүй
+                                 <Link href="/Product">
+                                  <a className='link-a'>Дэлгэрэнгүй</a>
+                                 </Link>
+                                 <style jsx>{`
+                                .link-a{
+                                    color:white!important;   
+                                }
+                                `}</style>
                             </Button>
                         </Center>
                     </Box>

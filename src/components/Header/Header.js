@@ -8,7 +8,8 @@ import GlobalContext from "../../context/GlobalContext";
 import Offcanvas from "../Offcanvas";
 import NestedMenu from "../NestedMenu";
 import { device } from "../../utils";
-import Logo from "../Logo";
+// import Logo from "../Logo";
+import Logo from "../../assets/image/png/p02.png";
 import { menuItems } from "./menuItems";
 
 const SiteHeader = styled.header`
@@ -237,8 +238,23 @@ const Header = ({ isDark }) => {
       >
         <Container fluid>
           <nav className="navbar pcollapsex-0 px-md-3 site-navbar offcanvas-active navbar-expand-lg navbar-light">
-              <Logo/>
-
+              {/* <Logo/> */}
+              <img className="logo2" src={Logo} />
+              <style jsx>{`
+        .logo2{
+        width:100px;
+        height:80px;
+        margin-left:200px;
+        }
+        @media (max-width:767px){
+          .logo2{
+            width:70px;
+            height:50px;
+            margin-left:0px!important;
+          }
+        }
+        
+        `}</style>
             <div className="collapse navbar-collapse">
 
               <div className="navbar-nav ml-lg-auto mr-3">
@@ -246,14 +262,7 @@ const Header = ({ isDark }) => {
                   className="navbar-nav d-none d-lg-flex"
                   dark={isDark ? 1 : 0}
                 >
-                  <li className="nav-item">
-                    <a
-                        className="nav-link"
-                        href="/#"
-                    >
-                      НҮҮР
-                    </a>
-                  </li>
+                  
                   {menuItems.map(
                     (
                       { label, isExternal = false, name, items, ...rest },
@@ -445,41 +454,14 @@ const Header = ({ isDark }) => {
                       );
                     }
                   )}
-                  <li className="nav-item">
-                    <a
-                        className="nav-link"
-                        href="/"
-                        target="_blank"
-                    >
-                      БИДНИЙ ТУХАЙ
-                    </a>
-                  </li>
+                  
                   {/* Open about modal */}
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="/#"
-                      // onClick={(e) => {
-                      //   e.preventDefault();
-                      //   gContext.toggleAbout();
-                      // }}
-                    >
-                      Үйлчилгээ
-                    </a>
-                  </li>
+                  
 
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="/"
-                      target="_blank"
-                    >
-                      МЭДЭЭ МЭДЭЭЛЭЛ
-                    </a>
-                  </li>
+                  
 
                   {/* Open contact modal */}
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <a
                         className="nav-link"
                         href="/#"
@@ -490,7 +472,7 @@ const Header = ({ isDark }) => {
                     >
                       ХОЛБОО БАРИХ
                     </a>
-                  </li>
+                  </li> */}
                 </Menu>
               </div>
             </div>

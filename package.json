@@ -16,6 +16,8 @@
     "@emotion/styled": "^11",
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "@nextui-org/react": "^1.0.1-alpha.57",
+    "@sanity/client": "^2.23.0",
+    "@sanity/image-url": "^1.0.1",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.5.0",
     "framer-motion": "^4",

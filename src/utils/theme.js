@@ -27,7 +27,7 @@ const colors = {
   frontShade: rgba(defaultColors.dark, 0.5),
   border: rgba(defaultColors.ash, 0.115),
   shadow: rgba(defaultColors.ash, 0.175),
-  heading: defaultColors.dark,
+  heading: defaultColors.white,
   text: rgba(defaultColors.dark, 0.7),
   warning: defaultColors.warning,
   success: defaultColors.success,

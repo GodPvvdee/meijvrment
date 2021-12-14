@@ -27,9 +27,7 @@ const MyApp = ({ Component, pageProps, router }) => {
       </GlobalProvider>
     );
   }
-
   return (
-
     <GlobalProvider>
       <Layout pageContext={{}}>
         <Component {...pageProps} />
