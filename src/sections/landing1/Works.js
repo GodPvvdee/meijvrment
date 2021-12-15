@@ -19,6 +19,7 @@ import { Center } from "@chakra-ui/layout";
 import Partner from "../../components/PartnersSlider/Partner";
 import { backgroundSize, justifyItems, left } from "styled-system";
 import { alignItems } from "styled-system";
+xcx;
 import { ceil } from "lodash";
 const company = [
   <Companies />,
