@@ -39,7 +39,8 @@
     "sass": "^1.26.9",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.1",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "swiper": "^7.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",

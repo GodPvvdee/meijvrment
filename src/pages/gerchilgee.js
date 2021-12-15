@@ -1,7 +1,7 @@
 import React from "react";
 import Zurag from "../assets/image/png/gerchilgee.jpg";
 import PageWrapper from "../components/PageWrapper";
-
+import Swiper from "../components/Swiper/index";
 const IndexPage = () => {
   return (
     <>
@@ -9,8 +9,8 @@ const IndexPage = () => {
       <img className="zurag" src={Zurag} />  
       <h1 className="news-title ">ТУСГАЙ ЗӨВШӨӨРӨЛ,ГЭРЧИЛГЭЭ</h1>
       
-          sda
-         
+        <div className=""></div>
+         {/* <Swiper/> */}
       </PageWrapper>
       <style jsx>{`
       hr.new5{
