@@ -1,6 +1,9 @@
 // import YouTube from "react-youtube";
 // var getYouTubeID = require("get-youtube-id");
-
+import PageWrapper from "../components/PageWrapper";
+import Slider3 from "../components/Slider/news-slider";
+import News from "../components/Card/news";
+const medee = [<News/>,<News/>,<News/>,<News/>,<News/>,<News/>,]
 const Product = (props) => {
    const detail = [
       {
@@ -41,6 +44,8 @@ const Product = (props) => {
    ];
    return (
       <>
+      <PageWrapper darkTheme>
+        
          <div id="topMargin" className="mx-auto h-96 mb-40">
             <h1 className="text-sm text-blue-500 text-normal ml-2 mb-4">
                BUTEEGDEHUUN-USNII TOOLUUR-ENGIIIN TOOLUUR
@@ -48,7 +53,7 @@ const Product = (props) => {
             <div id="mainDiv" className=" gap-8 grid grid-cols-2">
                <div className="">
                   <img
-                     className="w-full mb-2"
+                     className="w-full zurag  mb-2"
                      id="mainImg"
                      src="https://images.unsplash.com/photo-1622915904739-efd69cd8c519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
                      alt="abc"
@@ -60,7 +65,7 @@ const Product = (props) => {
                      {images.map((data) => {
                         return (
                            <img
-                              className="lg:h-32 md:h-24"
+                              className="lg:h-32 zurag md:h-24"
                               onClick={() => console.log(data)}
                               id="smallImg"
                               src={data}
@@ -96,8 +101,34 @@ const Product = (props) => {
                </div>
             </div>
          </div>
+         {/* end */}
+         <div className="container ">
+          <h1 className="product-title">БУСАД БҮТЭЭГДЭХҮҮН</h1>
+         {/* <Flex> */}
+         
+          <Slider3 comps={medee} length={5} />
+          {/* </Flex> */}
+         </div>
          {/* CSS */}
          <style jsx>{`
+         .zurag{
+            max-width: 100%; 
+  -moz-transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  
+         }
+         .zurag:hover{
+            -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+         }
+         .product-title {
+            color:#4A77FA;
+            font-size: 18px;
+            margin-left:40px;
+            text-align:center;
+          }
             #topMargin {
                margin-top: 115px;
                height: fit-content;
@@ -114,6 +145,7 @@ const Product = (props) => {
                object-fit: cover;
             }
          `}</style>
+         </PageWrapper>
       </>
    );
 };

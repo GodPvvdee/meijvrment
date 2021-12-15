@@ -4,11 +4,11 @@ export const menuItems = [
     label: "Нүүр",
   },
   {
-    name: "our-about",
+    name: "",
     label: "Бидний тухай",
     items: [
-      { name: "", label: "Компаний танилцуулга" },
-      { name: "designer-2", label: "тусгай зөвшөөрөл,гэрчилгээ" },
+      { name: "our-about", label: "Компаний танилцуулга" },
+      { name: "gerchilgee", label: "тусгай зөвшөөрөл,гэрчилгээ" },
       { name: "devloper-1", label: "Ажлын туршлага" },
       { name: "devloper-2", label: "Хамтын ажиллагаа" },
     ],

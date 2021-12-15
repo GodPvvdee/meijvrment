@@ -23,15 +23,12 @@ const Index = ({ name, brand }) => {
     const property = {
         imageUrl: "http://ddl.mn/wp-content/uploads/2021/05/zx7-315gt-200x200.jpg",
         imageAlt: "Rear view of modern home with pool",
-        beds: 3,
-        baths: 2,
-        reviewCount: 34,
-        rating: 4,
+        
     }
     return (
         <div>
-            <Center py={6} boxShadow={'2xl'}>
-                <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" maxWidth={360} className='bg-white rounded-xl'>
+            <Center py={8} boxShadow={'2xl'}>
+                <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" maxWidth={460} className='bg-white rounded-xl'>
                     <Image src={property.imageUrl} alt={property.imageAlt} className='mx-1' />
                     <Box p="3">
                         <Box

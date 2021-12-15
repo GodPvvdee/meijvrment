@@ -11,15 +11,17 @@ import Companies from "../../components/Card/companies";
 import News from "../../components/Card/news";
 import Slider from "../../components/Slider";
 import Slider2 from "../../components/Slider/company-slider";
+import Slider3 from "../../components/Slider/news-slider";
 import imgHeader from "../../assets/image/webp/head.svg";
 import innerImg from "../../assets/image/png/huree2.png";
 import LogoImg from "../../assets/image/jpg/logo.jpg";
 import { Center } from "@chakra-ui/layout";
 import Partner from "../../components/PartnersSlider/Partner";
-import { justifyItems, left } from "styled-system";
+import { backgroundSize, justifyItems, left } from "styled-system";
 import { alignItems } from "styled-system";
 import { ceil } from "lodash";
 const company = [<Companies/>,<Companies/>,<Companies/>,<Companies/>,<Companies/>,<Companies/>,]
+const medee = [<News/>,<News/>,<News/>,]
 const cards = [
   <Card />,
   <Card />,
@@ -30,7 +32,6 @@ const cards = [
   <Card />,
   <Card />,
 ];
-// const logos = [LogoImg, LogoImg, LogoImg, LogoImg, LogoImg, LogoImg];
 const Works = ({data}) => {
   console.log("Data ", data)
   const [items, setItems] = useState([]);
@@ -66,28 +67,33 @@ const Works = ({data}) => {
           justifyContent: "evenly",
 
         }}
+        
       >
+        
         <div className="container ">
-          <h1 className="product-title">Бүтээгдэхүүн</h1>
+          <h1 className="product-title">БҮТЭЭГДЭХҮҮН</h1>
          {/* <Flex> */}
          
           <Slider  comps={data} length={5} />
           {/* </Flex> */}
                  </div>
       </div>
-      <div className="sda flex flex-col items-center justify-center">
+      <div className="sda flex flex-col  items-center justify-center">
         <img className="innerImg"  src={innerImg} />
         <div className="our-background">
           <h2 className="our-h2">БИДНИЙ ТУХАЙ</h2>
-          <p className="our-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          <p className="our-p">Манай компани нь Монгол Улс, БНХАУ-ын Шинжлэх ухаан, технологийн их, дээд сургуулиудыг дулаан, цахилгаан, электроникийн инженер, физикч мэргэжлээр төгссөн, хэмжил зүйн салбарт 10-15 жил ажилласан, хэмжил зүйн чиглэлээр мэргэшсэн, чадварлаг багийг бүрдүүлэн ажиллаж байгаа бөгөөд хэмжих хэрэгслийн ашиглалт, суурилуулалт, засвартай холбоотой сургалт, зөвлөгөө өгөн ажиллаж байна.
+
 
 </p>
+          
        <Center>
         <Button className="our-about-button"
           style={{
             borderRadius: ".70rem",
             alignContent: "center",
             alignItems: "center",
+            top:"50px",
             transition: "200ms",
           }}
           w={"full"}
@@ -106,17 +112,58 @@ const Works = ({data}) => {
         </Center>
         </div>
       </div>
-      <h1 className="news-title">Мэдээ мэдээлэл</h1>
+      <style jsx>{`
+      
+      .our-p{
+        color:white;
+      }
+      .our-h2{
+        color:white;
+        font-size: 20px;
+      }
+      .sda{
+        position: relative;
+      }
+        .product-title {
+          color:#4A77FA;
+          font-size: 18px;
+          margin-left:40px;
+        }
+        .news-title{
+          color:#4A77FA;
+          font-size: 18px;
+          margin-left:40px;
+          text-align:center;
+        }
+        .medee-container{
+          display:flex;
+          align-items: center;
+         
+          justify-content: center;
+        }
+        .our-background{
+          position:absolute;
+          background-color:#0D6AF2;
+          opacity:0.7;
+          text-align:center;
+          height:180px;
+          border-radius:50px;
+          width:80%;
+         
+        }
+      `}</style>
+      <h1 className="news-title">МЭДЭЭ МЭДЭЭЛЭЛ</h1>
       <Center>
         <div className="medee-container container ">
+          {/* <News />
           <News />
-          <News />
-          <News />
+          <News /> */}
+         <Slider3 comps={medee} length={3} />
         </div>
       </Center>
        
       {/*end*/}
-      <h1 className="news-title">Худалдаа үйлчилгээ</h1>
+      <h1 className="news-title">ХУДАЛДАА ҮЙЛЧИЛГЭЭ</h1>
       <div className="container ">
         <div className="row  flex">
           <div className="col-sm-12 col-md-10">
@@ -150,7 +197,7 @@ const Works = ({data}) => {
             </div>
           </div>
         </div>
-        <h1 className="news-title">Хамтын ажиллагаа</h1>
+        <h1 className="news-title">ХАМТЫН АЖИЛЛАГАА </h1>
         <div className="container">
           <Slider2 comps={company} length={5} />
         </div>
