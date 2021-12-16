@@ -28,7 +28,7 @@ const Hero = () => {
                 style={{ lineHeight: "1.5", fontWeight: "500" }}
                 className="lg:text-lg md:text-base sm:text-xs text-white"
               >
-                RILAND БРЭНДИЙН ГАГНУУРЫН АППАРАТЫН МОНГОЛ ДАХЬ ЦОРЫН ГАНЦ АЛБАН ЁСНЫ ДИСТЕРБЬЮТЕР
+                RILAND БРЭНДИЙН ГАГНУУРЫН АППАРАТЫН МОНГОЛ ДАХЬ ЦОР ГАНЦ АЛБАН ЁСНЫ ДИСТЕРБЬЮТЕР
               </p>
               {console.log(Math.floor(JSON.stringify(measure.height)))}
             </div>
