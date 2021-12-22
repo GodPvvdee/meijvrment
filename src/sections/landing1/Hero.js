@@ -30,7 +30,6 @@ const Hero = () => {
               >
                 RILAND БРЭНДИЙН ГАГНУУРЫН АППАРАТЫН МОНГОЛ ДАХЬ ЦОР ГАНЦ АЛБАН ЁСНЫ ДИСТЕРБЬЮТЕР
               </p>
-              {console.log(Math.floor(JSON.stringify(measure.height)))}
             </div>
           </div>
           <TestCarousel height={`${Math.floor(JSON.stringify(measure.height))}px`} />
