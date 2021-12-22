@@ -20,7 +20,7 @@ const Hero = () => {
             <div
               style={{
                 width: "65%",
-                maxWidth: "340px",
+                maxWidth: "339px",
               }}
               className="h-40 absolute left-20 right-0 top-0 bottom-0 m-auto z-20"
             >
