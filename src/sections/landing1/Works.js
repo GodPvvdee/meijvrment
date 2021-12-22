@@ -12,6 +12,7 @@ import News from "../../components/Card/news";
 import Slider from "../../components/Slider";
 import Slider2 from "../../components/Slider/company-slider";
 import Slider3 from "../../components/Slider/news-slider";
+import SocialButton from "../../components/SocialButton/SocialButton";
 import imgHeader from "../../assets/image/webp/head.svg";
 import innerImg from "../../assets/image/png/huree2.png";
 import LogoImg from "../../assets/image/jpg/logo.jpg";
@@ -197,6 +198,7 @@ const Works = ({ data }) => {
       <div className="container">
         <Slider2 comps={company} length={5} />
       </div>
+      <SocialButton />
     </div>
   );
 };

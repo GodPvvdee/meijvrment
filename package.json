@@ -16,6 +16,8 @@
     "@emotion/styled": "^11",
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "@nextui-org/react": "^1.0.1-alpha.57",
+    "@reactivers/hooks": "^1.0.14",
+    "@reactivers/use-measure": "^1.0.0",
     "@sanity/client": "^2.23.0",
     "@sanity/image-url": "^1.0.1",
     "aos": "^3.0.0-beta.6",
@@ -27,6 +29,7 @@
     "next-fonts": "^1.2.0",
     "polished": "^3.6.5",
     "react": "16.13.1",
+    "react-awesome-slider": "^4.1.0",
     "react-bootstrap": "^1.0.1",
     "react-countdown": "^2.2.1",
     "react-dom": "16.13.1",
@@ -37,11 +40,13 @@
     "react-scroll": "^1.8.1",
     "react-select": "^3.1.0",
     "react-slick": "^0.26.1",
+    "react-use": "^17.3.1",
     "sass": "^1.26.9",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.1",
     "styled-system": "^5.1.5",
-    "swiper": "^7.3.2"
+    "swiper": "^7.3.2",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",

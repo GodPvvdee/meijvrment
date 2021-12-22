@@ -2,14 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
-import {
-  Title,
-  Button,
-  Section,
-  Box,
-  Text,
-  LinkContact,
-} from "../../components/Core";
+import { Title, Button, Section, Box, Text, LinkContact } from "../../components/Core";
 
 const Hero = () => {
   return (
@@ -21,8 +14,8 @@ const Hero = () => {
             <Col lg="11" xl="10" className="text-center">
               <Box>
                 <Title variant="secSm">
-                  I am taking new projects. Waiting to hearing about new
-                  projects, so if you'd like to chat please get in touch.
+                  I am taking new projects. Waiting to hearing about new projects, so if you'd like
+                  to chat please get in touch.
                 </Title>
 
                 <Box
@@ -37,13 +30,8 @@ const Hero = () => {
                     >
                       contact@folio.design
                     </LinkContact>
-                    <span className="divider mx-2 mx-lg-4 d-none d-lg-block">
-                      |
-                    </span>
-                    <LinkContact
-                      href="https://www.linkedin.com/folio"
-                      target="_blank"
-                    >
+                    <span className="divider mx-2 mx-lg-4 d-none d-lg-block">|</span>
+                    <LinkContact href="https://www.linkedin.com/folio" target="_blank">
                       linkedin.com/folio
                     </LinkContact>
                   </div>
